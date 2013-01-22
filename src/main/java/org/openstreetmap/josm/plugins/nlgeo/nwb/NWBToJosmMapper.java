@@ -37,7 +37,7 @@ public class NWBToJosmMapper implements ObjectToJosmMapper<Wegvak> {
     return;
   }
 
-  private Map<String, String> createWayTags(Wegvak wegvak) {
+  private static Map<String, String> createWayTags(Wegvak wegvak) {
     Map<String, String> keys = new HashMap<String, String>();
     keys.put("highway", "unclassified");
     keys.put("name", wegvak.getWegvaknaam());
