@@ -103,7 +103,7 @@
 				<attribute name="Plugin-Icon" value="images/nwb.png" />
 				<attribute name="Plugin-Link" value="https://www.pdok.nl/nl/service/wfs-nwb-wegen" />
 				<attribute name="Plugin-Mainversion" value="${plugin.main.version}" />
-				<attribute name="Plugin-Version" value="0.1.1-SNAPSHOT" />
+				<attribute name="Plugin-Version" value="0.1.2" />
 				<attribute name="Plugin-Requires" value="openservices" />
 				<attribute name="Class-Path" value="lib/" />
 			</manifest>
