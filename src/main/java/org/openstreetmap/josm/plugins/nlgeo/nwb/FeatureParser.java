@@ -5,7 +5,7 @@ import org.openstreetmap.josm.plugins.openservices.wfs.WFSFeatureParser;
 
 import com.vividsolutions.jts.geom.MultiLineString;
 
-public class FeatureParser implements WFSFeatureParser<Wegvak> {
+public class FeatureParser implements WFSFeatureParser {
   
   @Override
   public Wegvak parse(SimpleFeature feature) {

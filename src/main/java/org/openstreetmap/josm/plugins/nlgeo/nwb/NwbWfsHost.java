@@ -7,7 +7,6 @@ public class NwbWfsHost extends WfsHost {
   
   private NwbWfsHost() {
     super("http://geodata.nationaalgeoregister.nl/nwbwegen/wfs");
-    addFeature("nwbwegen:wegvakken");
   }
   
   public static NwbWfsHost getInstance() {

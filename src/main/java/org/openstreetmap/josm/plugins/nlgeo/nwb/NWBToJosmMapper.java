@@ -16,7 +16,7 @@ import com.vividsolutions.jts.geom.LineString;
  * @author Gertjan Idema
  *
  */
-public class NWBToJosmMapper implements ObjectToJosmMapper<Wegvak> {
+public class NWBToJosmMapper implements ObjectToJosmMapper {
   private final JosmObjectFactory objectFactory;
 
   /**
@@ -27,6 +27,14 @@ public class NWBToJosmMapper implements ObjectToJosmMapper<Wegvak> {
   }
 
   @Override
+  public void create(Object object) {
+    if (object instanceof Wegvak) {
+      create((Wegvak)object);
+      return;
+    }
+    throw new IllegalArgumentException("Unexpected object type: " + object.getClass());
+  }
+  
   public void create(Wegvak wegvak) {
     Map<String, String> keys = createWayTags(wegvak);
     for (int i=0; i < wegvak.getWegdelen().getNumGeometries(); i++) {

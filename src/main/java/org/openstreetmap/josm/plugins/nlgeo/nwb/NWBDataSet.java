@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.openstreetmap.josm.plugins.openservices.wfs.WFSDataSet;
 
-public class NWBDataSet extends WFSDataSet<Wegvak> {
+public class NWBDataSet extends WFSDataSet {
 
   public NWBDataSet() {
     super(new FeatureParser());
@@ -12,7 +12,9 @@ public class NWBDataSet extends WFSDataSet<Wegvak> {
   }
  
   @Override
-  protected Serializable getId(Wegvak o) {
-    return o.getId();
+  protected Serializable getId(Object o) {
+    if (o instanceof Wegvak)
+      return ((Wegvak)o).getId();
+    return null;
   }
 }
